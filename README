@@ -1,0 +1,32 @@
+SUMMARY
+
+This is a really simple (but powerful) tool, so I won't waste your time.
+
+You write a rules script, there is no standardized extension at this point.
+
+To run the script, run procmon SCRIPTNAME
+
+The scripts are written in a type of broken English befitting a very simple interpreter -- like this one.
+
+CONDITION
+STATEMENT
+STATEMENT
+STATEMENT
+STATEMENT
+...
+endif
+
+and repeat.
+
+STATEMENT takes the form of any normal bash script file, until the interpreter finds 'endif'.
+
+
+CONDITION takes the form of the following.
+
+if (starts|dies|running) (the|any|all) "procname";
+
+Were you to type any or all in the condition, you would then be allowed to have multiple process names, each individually inside quotation marks and separated by spaces.
+
+I'm sure the interpretation engine's logic is not 100% reliable, but it works in the general cases I've tested with.
+
+The interpreter loops over the system list of processes once per second.

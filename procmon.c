@@ -23,9 +23,9 @@ int main(int argc, char** argv)
     loadrules(argv[1]);
     updatelist();
     reupdate: //infinitely update list, until such time as the program closes
-    diff();
-    checkcond();
-    sleep(1);
+        diff();
+        checkcond();
+        sleep(1);
     goto reupdate;
 }
 
@@ -305,7 +305,7 @@ void checkcond()
             }
             else
             {
-                //ERRROR
+                //ERROR
             }
         }
         //printf("%i: %i\n", i, bfinal);
