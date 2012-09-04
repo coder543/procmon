@@ -1,0 +1,15 @@
+#an example set of rules
+if starts the "bash";
+pkill compiz
+pkill compiz.real
+metacity --replace
+endif
+
+if dies the "bash";
+pkill metacity
+compiz --replace
+endif
+
+if dies the "soffice.bin";
+libreoffice -nodefault -nologo
+endif
